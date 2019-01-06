@@ -3,6 +3,9 @@ package com.example.android.moodymausam;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.android.moodymausam.data.SunshinePreferences;
@@ -94,6 +97,26 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //On adding menu to inflate the menu for this Activity
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.forecast,menu);
+        return true;
+    }
 
+
+    //To handle clicks on refresh button
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id =item.getItemId();
+        if(id == R.id.action_refresh){
+            mWeatherTextView.setText("");
+            loadWeatherData();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
 

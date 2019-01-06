@@ -1,14 +1,9 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Moody Mausam</string>
 
-    <!-- - - - - - - - - - - - - -->
-    <!-- Used throughout Sunshine-->
-    <!-- - - - - - - - - - - - - -->
 
-    <!--Used in Action Bar, and in AndroidManifest to tell the device the name of this app.-->
-    <!--It's good to keep this short, so your launcher icon isn't displayed with "The greatest Wea"-->
-    <!--or something similar.-->
-
+    <!-- Used to refresh the weather Data-->
+    <string name="action_refresh">Refresh</string>
 
 
     <!-- - - - - - - - - - - - - -->
